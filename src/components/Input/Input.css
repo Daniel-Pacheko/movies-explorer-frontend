@@ -1,0 +1,32 @@
+.field__label {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 10px;
+  font-size: 10px;
+  line-height: 12px;
+  color: #8B8B8B;
+}
+
+.field__input {
+  background: none;
+  color: white;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #424242;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 15px;
+}
+
+.field__input:focus {
+  background: none;
+}
+
+.field__txt-error {
+  display: none;
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 400;
+  color: #EE3465;
+}
