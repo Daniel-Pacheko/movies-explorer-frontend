@@ -5,27 +5,26 @@ import Footer from "../Footer/Footer";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import MoviesCard from "../MoviesCard/MoviesCard";
+import Message from "../Message/Message";
 
+function SavedMovies({ isLoggedIn, movies, onSubmit, onDeleteMovie, message, moviesOrigin, setMovies, moviesFiltered }) {
 
-
-function SavedMovies() {
-
+  React.useEffect(() => {
+    const search = JSON.parse(localStorage.getItem("searchSaved"));
+    if (!search) {
+      onSubmit("", false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [moviesOrigin]);
   return (
     <>
-      <Header />
+      <Header isLoggedIn={isLoggedIn} />
       <main className="content">
-      <SearchForm />
-      <MoviesCardList>
-        <MoviesCard 
-          statusBtn = "delete"
-        />
-        <MoviesCard 
-          statusBtn = "delete"
-        />
-        <MoviesCard 
-          statusBtn = "delete"
-        />
-      </MoviesCardList>
+        <SearchForm onSubmit={onSubmit} setMovies={setMovies} suffix="Saved" moviesFiltered={moviesFiltered}/>
+        <MoviesCardList>
+        {movies.map( movie => (<MoviesCard movie={movie} key={movie._id} statusBtn="delete" onDeleteMovie = {onDeleteMovie} />))}
+        </MoviesCardList>
+        <Message message={message}/>
       </main>
       <Footer />
     </>

@@ -7,11 +7,12 @@ import AboutMe from "./AboutMe/AboutMe";
 import Portfolio from "./Portfolio/Portfolio";
 import Footer from "../Footer/Footer";
 
-function Main() {
+function Main({ isLoggedIn }) {
   return (
     <>
       <Header />
       <main className="content">
+      <Header isLoggedIn={isLoggedIn} />
         <Promo />
         <AboutProject />
         <Techs />

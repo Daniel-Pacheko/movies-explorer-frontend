@@ -1,9 +1,9 @@
 import React from "react";
 import "./MoviesButton.css";
 
-function MoviesButton() {
+function MoviesButton({onClick}) {
   return (
-    <button className="movies-button" type="button">Ещё</button>
+    <button className="movies-button" type="button" onClick={onClick}>Ещё</button>
   )
 }
 
