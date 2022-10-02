@@ -50,7 +50,7 @@ function SearchForm({ onSubmit, setMovies, suffix, moviesFiltered}) {
         <form className="search__form" noValidate onSubmit={handleSubmit}>
           <img className="search__icon" src={SearchIcon} alt="Поиск" />
           <input className="search__input" id="search" type="text" placeholder="Фильм" minLength="1" value={keyword} maxLength="50" onChange={handleKeywordChange} />
-          <button className="search__btn" type="submit">Найти</button>
+          <button className="search__btn" type="submit"></button>
         </form>
         <FilterCheckbox checked={checked} onChange={chengeCheckbox} />
       </div>

@@ -10,9 +10,8 @@ import Footer from "../Footer/Footer";
 function Main({ isLoggedIn }) {
   return (
     <>
-      <Header />
-      <main className="content">
       <Header isLoggedIn={isLoggedIn} />
+      <main className="content">
         <Promo />
         <AboutProject />
         <Techs />

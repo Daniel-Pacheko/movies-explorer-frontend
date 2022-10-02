@@ -619,7 +619,7 @@ function Footer() {
         }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("li", {
           children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("a", {
             className: "footer__link",
-            href: "https://github.com/APacheko/react-mesto-api-full",
+            href: "https://github.com/Daniel-Pacheko/react-mesto-api-full",
             target: "_blank",
             rel: "noopener noreferrer",
             children: "Github"
@@ -635,7 +635,7 @@ function Footer() {
         }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("li", {
           children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("a", {
             className: "footer__link",
-            href: "https://github.com/APacheko/react-mesto-api-full",
+            href: "https://github.com/Daniel-Pacheko/react-mesto-api-full",
             target: "_blank",
             rel: "noopener noreferrer",
             children: "Facebook"
@@ -1374,7 +1374,7 @@ function AboutMe() {
           }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("li", {
             children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
               className: "about-me__link",
-              href: "https://github.com/APacheko",
+              href: "https://github.com/Daniel-Pacheko",
               target: "_blank",
               rel: "noopener noreferrer",
               children: "Github"
@@ -1912,7 +1912,7 @@ function Portfolio() {
         className: "portfolio__item",
         children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
           className: "portfolio__link",
-          href: "https://github.com/APacheko/how-to-learn",
+          href: "https://github.com/Daniel-Pacheko/how-to-learn",
           target: "_blank",
           rel: "noopener noreferrer",
           children: ["\u0421\u0442\u0430\u0442\u0438\u0447\u043D\u044B\u0439 \u0441\u0430\u0439\u0442", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("img", {
@@ -1937,7 +1937,7 @@ function Portfolio() {
         className: "portfolio__item",
         children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
           className: "portfolio__link",
-          href: "https://github.com/APacheko/russian-travel",
+          href: "https://github.com/Daniel-Pacheko/russian-travel",
           target: "_blank",
           rel: "noopener noreferrer",
           children: ["\u0410\u0434\u0430\u043F\u0442\u0438\u0432\u043D\u044B\u0439 \u0441\u0430\u0439\u0442", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("img", {
@@ -1962,7 +1962,7 @@ function Portfolio() {
         className: "portfolio__item",
         children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
           className: "portfolio__link",
-          href: "https://github.com/APacheko/react-mesto-api-full",
+          href: "https://github.com/Daniel-Pacheko/react-mesto-api-full",
           target: "_blank",
           rel: "noopener noreferrer",
           children: ["\u041E\u0434\u043D\u043E\u0441\u0442\u0440\u0430\u043D\u0438\u0447\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("img", {

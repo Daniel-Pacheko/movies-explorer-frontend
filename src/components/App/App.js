@@ -109,6 +109,8 @@ function App() {
     handleTokenCheck();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  
   function handleRegistration(name, email, password) {
     mainApi.register(name, email, password)
       .then(res => {
@@ -118,10 +120,12 @@ function App() {
         setMessage(err);
       })
   }
+
+
   function handleTokenCheck() {
     const jwt = localStorage.getItem("jwt");
     if (jwt) {
-      mainApi.checkToken()
+      mainApi.checkToken(jwt)
         .then(() => {
           setIsLoggedIn(true);
           getUserDate();
@@ -135,6 +139,8 @@ function App() {
       setIsUserChecked(true);
     }
   }
+
+
   function handleAuthorization(email, password) {
     mainApi.authorize(email, password)
       .then(res => {
@@ -145,6 +151,8 @@ function App() {
         setMessage(err);
       })
   }
+
+
   function getUserDate() {
     mainApi.getUserData()
       .then((res) => {

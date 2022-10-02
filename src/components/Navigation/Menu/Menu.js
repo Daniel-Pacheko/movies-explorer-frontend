@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom';
-import accountIcon from "../../../images/account-icon.svg";
+import accountIcon from "../../../images/icon__COLOR_icon-akkaunt.svg";
 import "./BurgerMenu.css";
 
 

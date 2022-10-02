@@ -28,24 +28,38 @@ function MoviesCard({ statusBtn, movie, onSaveMovie, onDeleteMovie }) {
     onDeleteMovie(movie.id === undefined ? movie.movieId : movie.id)
   }
 
+  function convertDuration() {
+    if (movie.duration > 60) {
+      return (movie.duration / 60 | 0) + "ч " + movie.duration % 60 + "м"
+    }
+    if (movie.duration === 60) {
+      return (movie.duration / 60) + "ч"
+    } else {
+      return movie.duration + " минут"
+    }
+  }
+
   return (
     <li className="movie">
-      <div className="movie__container">
-        <h1 className="movie__title">{movie.nameRU}</h1>
-        <p className="movie__time">{movie.duration + ' минут'}</p>
-      </div>
-      <a className="movie__trailerlink" target="blank" href={movie.trailerLink}>
-        <img className="movie__poster" src={location.pathname === '/movies' ? serverUrl + movie.image.url : movie.image} alt={movie.nameRU}/>
-      </a>
-       {statusBtn === "save" && (
-         <button className="movie__btn" type="button" onClick={handleSubmit}>Сохранить</button>
+      <div className="movie__content">
+        <div className="movie__container">
+          <h1 className="movie__title">{movie.nameRU}</h1>
+          <p className="movie__time">{convertDuration()}</p>
+        </div>
+       
+        {statusBtn === "save" && (
+          <button className="movie__btn movie__btn_type_save" type="button" onClick={handleSubmit}></button>
         )}
-       {statusBtn === "delete" && (
-         <button className="movie__btn movie__btn_type_delete" type="button" onClick={handleDelete}></button>
+        {statusBtn === "delete" && (
+          <button className="movie__btn movie__btn_type_delete" type="button" onClick={handleDelete}></button>
         )}
         {statusBtn === "saved" && (
-         <button className="movie__btn movie__btn_type_active" type="button" onClick={handleDelete}></button>
+          <button className="movie__btn movie__btn_type_active" type="button" onClick={handleDelete}></button>
         )}
+      </div>
+      <a className="movie__trailerlink" target="blank" href={movie.trailerLink}>
+          <img className="movie__poster" src={location.pathname === '/movies' ? serverUrl + movie.image.url : movie.image} alt={movie.nameRU} />
+        </a>
     </li>
   )
 }
