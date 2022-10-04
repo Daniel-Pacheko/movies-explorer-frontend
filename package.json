@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "npm run build && scp -r ./build/* pachekodaniel1@51.250.86.91:/home/pachekodaniel1/frontend",
+    "deploy": "npm run build && scp -r ./build/* pachekodaniel1@51.250.9.24:/home/pachekodaniel1/movies-explorer-frontend",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
