@@ -4,6 +4,8 @@ import Input from "../Input/Input";
 import { useFormWithValidation } from "../../utils/Validation";
 import Message from "../Message/Message";
 
+
+
 function Register({ onRegister, message, setMessege }) {
 
   const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
@@ -19,6 +21,8 @@ function Register({ onRegister, message, setMessege }) {
     const {name, email, password } = values;
     onRegister(name, email, password);
   }
+
+  
 
   return (
     <Form title="Добро пожаловать!" name="signup" textBtn="Зарегистрироваться" text="Уже зарегистрированы?" textLink="Войти" path="/signin" isValid={isValid} onSubmit={handleSubmit} >
@@ -46,8 +50,9 @@ function Register({ onRegister, message, setMessege }) {
         spanId="email-error"
         value={values.email || ''}
         onChange={handleChange}
+        
         required
-
+        
       />
       <Input
         textLabel="Пароль"

@@ -6,6 +6,14 @@ export function useFormWithValidation() {
     const [errors, setErrors] = React.useState({});
     const [isValid, setIsValid] = React.useState(false);
 
+    const validateEmail = (email) => {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@;]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+      };
+
     const handleChange = (e) => {
         const input = e.target;
         const name = input.name;
@@ -14,11 +22,21 @@ export function useFormWithValidation() {
             ...values,
             [name]: value
         });
-        setErrors({
-            ...errors,
-            [name]: input.validationMessage
-        });
-        setIsValid(input.closest("form").checkValidity());
+        if ( name === "email" && !validateEmail(value)){
+            setErrors({
+                ...errors,
+                [name]: "Введен некорректные Email. Пример: `yandex@yandex.ru` После точки должно быть минимум 2 символа."
+            });
+            setIsValid(false);
+        } else {
+            setErrors({
+                ...errors,
+                [name]: input.validationMessage
+            });
+            setIsValid(input.closest("form").checkValidity());
+        }
+        
+       
     };
 
     const resetForm = useCallback(
